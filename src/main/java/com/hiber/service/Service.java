@@ -30,11 +30,11 @@ public class Service {
 
 		status = false;
 
-		System.out.print("Enter Student Name: ");
+		System.out.println("Enter Student Name: ");
 		name = Utils.input().next();
 
 		System.out.print("Enter Student Class: ");
-		standred = Utils.input().nextLine();
+		standred = Utils.input().next();
 
 		System.out.print("Enter Student district: ");
 		district = Utils.input().next();
@@ -42,8 +42,8 @@ public class Service {
 		System.out.print("Enter Student city: ");
 		city = Utils.input().next();
 
-		System.out.print("Enter Student locality: ");
-		locality = Utils.input().nextLine();
+		System.out.println("Enter Student locality: ");
+		locality = Utils.input().next();
 
 		System.out.print("Enter Student house no: ");
 		houseNo = Utils.input().next();
@@ -102,7 +102,7 @@ public class Service {
 		switch (choic) {
 		case 1:
 			System.out.print("Enter Name: ");
-			name = Utils.input().nextLine();
+			name = Utils.input().next();
 			student.setName(name);
 			break;
 		case 2:
@@ -122,7 +122,7 @@ public class Service {
 			break;
 		case 5:
 			System.out.print("Enter Locality: ");
-			locality = Utils.input().nextLine();
+			locality = Utils.input().next();
 			add.setLocality(locality);
 			break;
 		case 6:
