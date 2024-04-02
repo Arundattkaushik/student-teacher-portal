@@ -28,7 +28,7 @@ public class Student {
 	
 	@Column(name = "student_type")
 	//Type can be : student, teacher, admin
-	private String type;
+	private String type = "student";
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name = "student_create_date")
@@ -69,9 +69,6 @@ public class Student {
 	}
 	public String getType() {
 		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public Student() {

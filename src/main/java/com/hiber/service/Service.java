@@ -34,7 +34,7 @@ public class Service {
 		name = Utils.input().next();
 
 		System.out.print("Enter Student Class: ");
-		standred = Utils.input().next();
+		standred = Utils.input().nextLine();
 
 		System.out.print("Enter Student district: ");
 		district = Utils.input().next();
@@ -43,13 +43,10 @@ public class Service {
 		city = Utils.input().next();
 
 		System.out.print("Enter Student locality: ");
-		locality = Utils.input().next();
+		locality = Utils.input().nextLine();
 
 		System.out.print("Enter Student house no: ");
 		houseNo = Utils.input().next();
-
-		System.out.print("Enter a Type: eg. student, teacher or admin ");
-		type = Utils.input().next();
 
 		student.setName(name);
 		student.setStandred(standred);
@@ -58,7 +55,6 @@ public class Service {
 		add.setLocality(locality);
 		add.setHouseNumber(houseNo);
 		student.setAddress(add);
-		student.setType(type);
 
 		sId = dao.save(student);
 
@@ -88,7 +84,6 @@ public class Service {
 		add.setCity(add.getCity());
 		add.setLocality(add.getLocality());
 		add.setHouseNumber(add.getHouseNumber());
-		student.setType(student.getType());
 		
 
 		System.out.println("======================== Please press mentioned key to updated desired detail =======================");
@@ -100,15 +95,14 @@ public class Service {
 		System.out.println("Student city: 4");
 		System.out.println("Student locality: 5");
 		System.out.println("Student house no: 6");
-		System.out.println("To Change a Type: eg. student, teacher or admin  7");
-		System.out.println("To Change all details  8");
+		System.out.println("To Change all details  7");
 		
 
 		int choic = Utils.input().nextInt();
 		switch (choic) {
 		case 1:
 			System.out.print("Enter Name: ");
-			name = Utils.input().next();
+			name = Utils.input().nextLine();
 			student.setName(name);
 			break;
 		case 2:
@@ -128,7 +122,7 @@ public class Service {
 			break;
 		case 5:
 			System.out.print("Enter Locality: ");
-			locality = Utils.input().next();
+			locality = Utils.input().nextLine();
 			add.setLocality(locality);
 			break;
 		case 6:
@@ -136,15 +130,10 @@ public class Service {
 			houseNo = Utils.input().next();
 			add.setHouseNumber(houseNo);
 			break;
-		case 7:
-			System.out.print("Enter Type: ");
-			type = Utils.input().next();
-			student.setType(type);
-			break;
 			
-		case 8:
+		case 7:
 			System.out.print("Enter Name: ");
-			name = Utils.input().next();
+			name = Utils.input().nextLine();
 			student.setName(name);
 			
 			System.out.print("Enter Class: ");
@@ -160,16 +149,12 @@ public class Service {
 			add.setCity(city);
 			
 			System.out.print("Enter Locality: ");
-			locality = Utils.input().next();
+			locality = Utils.input().nextLine();
 			add.setLocality(locality);
 			
 			System.out.print("Enter House No.: ");
 			houseNo = Utils.input().next();
 			add.setHouseNumber(houseNo);
-			
-			System.out.print("Enter Type: ");
-			type = Utils.input().next();
-			student.setType(type);	
 			break;
 
 		default:
